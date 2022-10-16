@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
 }
-body {
+body, p {
     margin: 0;
     font-family: "Graphik LCG";
 }
@@ -27,6 +27,13 @@ body {
 .flex-direction-column {
     flex-direction: column;
 }
+.gap-130{
+    gap: 138px;
+}
+.mb-250{
+    margin-bottom: 250px;
+}
+/*header*/
 .container {
    max-width: 1290px;
     margin: 0 auto;
@@ -58,7 +65,7 @@ body {
     text-align: center;
     color: #000000;
     background: white;
-    border:  solid black;
+    border: 1px solid rgba(0, 0, 0, 0.5);
     padding: 0 15px;
     min-width: 120px;
 }
@@ -106,46 +113,39 @@ body {
 }
 
 /*banner*/
-.card {
-    width: 45%;
-
+.banner .card {
+    width: 50%;
 }
-
 .banner {
-    background-image: url("../img/banner.png");
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: contain;
-    margin: 130px 0;
+    margin: 130px 0 137px;
 }
 .banner .card .card-title {
     font-weight: 600;
     font-size: 65px;
     line-height: 70px;
-    color: #000000;
     margin-bottom: 51px;
+    width: 110%;
 }
 .banner .card .car-desk {
     font-weight: 400;
     font-size: 25px;
     line-height: 35px;
-    color: #000000;
-    margin-bottom: 30px;
-    width: 69%;
+    margin-bottom: 50px;
+    width: 90%;
 }
-
+.banner .btns{
+    margin-bottom: 25px;
+}
 .banner p{
     font-weight: 400;
     font-size: 15px;
     line-height: 25px;
-    color: #000000;
 }
 /*tool*/
 
 .tool {
     background: #FF9C7D;
     padding: 100px 0;
-    margin-bottom: 90px;
 }
 .tool .row {
     gap:70px;
@@ -155,7 +155,6 @@ body {
     font-size: 50px;
     line-height: 60px;
     text-align: center;
-    color: #000000;
     width: 50%;
 }
 .tool .tool-icon{
@@ -163,128 +162,34 @@ body {
 }
 /*app*/
 .app {
-    margin-bottom: 250px;
+    margin: 90px 0 160px;
+}
+.app .row:nth-of-type(even){
+    flex-direction: row-reverse;
 }
 .app .left, .app .right {
     width: 50%;
 }
-.app .left {
-    padding-top: 145px;
-}
-.app .app-title{
+.app .title{
     font-weight: 600;
     font-size: 50px;
     line-height: 60px;
-    color: #000000;
     margin-bottom: 30px;
-    width: 80%;
 }
-.app .app-deck{
+.app .deck{
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
-    color: #000000;
     margin-bottom: 30px;
-    width: 75%;
 }
-.app .app-deck span {
+.app .deck span {
     text-decoration: underline;
 }
 
-/*market*/
-.market {
-    margin-bottom: 250px;
-}
-.market .left, .market .right {
-    width: 50%;
-}
-.market .right{
-    padding: 150px 0 0 138px;
-}
-.market .market-title{
-    font-weight: 600;
-    font-size: 50px;
-    line-height: 60px;
-    color: #000000;
-    margin-bottom: 25px;
-    width: 70%;
-}
-.market .market-desk {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
-    color: #000000;
-    margin-bottom: 35px;
-    width: 88%;
-}
-.market .market-desk span {
-    text-decoration:underline;
-}
-
-/*contact*/
-.contact {
-    margin-bottom: 250px;
-}
-.contact .left, .contact .right{
-    width: 50%;
-}
-.contact .left{
-    padding-top: 161px;
-}
-.contact .contact-title {
-    font-weight: 600;
-    font-size: 50px;
-    line-height: 60px;
-    color: #000000;
-    margin-bottom: 30px;
-}
-.contact .contact-desk {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
-    color: #000000;
-    width: 81%;
-    margin-bottom: 35px;
-}
-.contact .contact-desk span {
-    text-decoration:underline;
-}
-/*work*/
-.work {
-    margin-bottom: 160px;
-}
-.work .left, .work .right {
-    width: 50%;
-}
-
-.work .right{
-    padding: 118px 0 0 118px;
-}
-.work .work-title{
-    font-weight: 600;
-    font-size: 50px;
-    line-height: 60px;
-    color: #000000;
-    width: 83%;
-    margin-bottom: 25px;
-}
-.work .work-dick {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
-    color: #000000;
-    margin-bottom: 27px;
-}
-.work .work-dick span{
-    text-decoration:underline;
-}
 /*icon*/
 .icon {
     background: #FFF8E4;
     padding: 120px 0 150px;
-}
-.icon .row{
-    gap: 58px 110px
 }
 .icon .icon-title {
     font-weight: 600;
@@ -292,30 +197,37 @@ body {
     line-height: 60px;
     text-align: center;
     color: #000000;
+    margin-bottom: 58px;
+}
+.icon .card-list{
+    gap: 58px 114px;
+    justify-content: center;
 }
 .icon .card {
-    width: calc(33% - 95px);
+    width: calc(33% - 100px);
     text-align: center;
+    padding: 21px 0 0;
+    min-height: 297px;
 }
 .icon .card img {
-    margin-bottom: 21px;
+    /*margin-bottom: 21px;*/
 }
-.card .card-title{
+.icon .card .card-title{
     font-weight: 600;
     font-size: 25px;
     line-height: 35px;
     text-align: center;
     color: #000000;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
 }
-.card .card-sub {
+.icon .card .card-sub {
     font-weight: 400;
     font-size: 18px;
     line-height: 25px;
     text-align: center;
     color: #000000;
 }
-.card .card-sub span{
+.icon .card .card-sub span{
     text-decoration: underline;
 }
     /*team*/
@@ -389,7 +301,6 @@ body {
 .cake{
     background: #DABC98;
     padding: 70px 0 84px;
-    margin-bottom: 169px;
 }
 .cake .cake-title{
     font-weight: 600;
@@ -408,7 +319,7 @@ body {
 }
 /*integrete*/
 .integrete{
-    margin-bottom: 130px;
+    margin: 169px 0 130px;
 }
 .integrete-title {
     font-weight: 600;
@@ -416,7 +327,6 @@ body {
     line-height: 75px;
     text-align: center;
     width: 60%;
-    margin: 0 249px 0 250px;
 }
 .integrete-sub {
     font-weight: 400;
@@ -424,10 +334,10 @@ body {
     line-height: 30px;
     text-align: center;
     width: 40%;
-    margin: 0 375px 25px 374px;
+    margin-bottom: 25px;
 }
 .integrete img {
-    margin: 0 209px 32px 208px;
+    margin-bottom: 32px;
 }
 .integrete button {
     font-weight: 600;
@@ -438,7 +348,6 @@ body {
     background: #FF6336;
    border: #FF6336;
     padding: 0 20px;
-    margin: 0 588px 0 589px;
 }
 .integrete button:hover{
     font-size: 20px;
@@ -449,7 +358,7 @@ body {
 /*try*/
 .try {
     background: #FF9C7D;
-    padding-top:119px ;
+    padding: 119px 0 161px;
     margin-bottom: 92px;
 }
 .try .try-title{
@@ -468,7 +377,6 @@ body {
     margin-bottom: 57px;
 }
 .try button{
-    margin-bottom: 161px;
     font-weight: 600;
     font-size: 17px;
     line-height: 60px;
@@ -476,7 +384,7 @@ body {
     color: #FFFFFF;
     padding: 0 40px;
     background: #000000;
-    border-radius: 0px;
+    border-radius: 0;
 }
 .try button:hover{
     font-size: 20px;
